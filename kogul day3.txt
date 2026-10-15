@@ -1,0 +1,492 @@
+1)switch case problem in java
+import java.util.Scanner;
+
+public class sampl3 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter your mark:");
+        int mark = scan.nextInt();
+        if (mark < 0 || mark > 100) {
+            System.out.println("invalid mark");
+        } else {
+            switch (mark / 10) {
+                case 10:
+
+                case 9:
+                    System.out.println("grade A");
+                    break;
+                case 8:
+                    System.out.println("grade B");
+                    break;
+                case 7:
+                    System.out.println("grade c");
+                    break;
+                case 6:
+                    System.out.println("grade D");
+                    break;
+                case 5:
+                    System.out.println("grade E");
+                    break;
+
+                default:
+                    System.out.println("fail");
+                    break;
+            }
+        }
+    }
+}
+ 
+
+2)1. Print numbers from 1 to 50 java
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 50; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+3. Print all odd numbers from 1 to 100 java
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 100; i += 2) {
+            System.out.println(i);
+        }
+    }
+}
+
+4. Find the sum of numbers from 1 to 100 java
+public class Main {
+    public static void main(String[] args) {
+        int sum = 0;
+
+        for (int i = 1; i <= 100; i++) {
+            sum = sum + i;
+        }
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
+5. Print the multiplication table of a number entered by the user java
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(n + " x " + i + " = " + (n * i));
+        }
+
+        sc.close();
+    }
+}
+
+6. Find the factorial of a number
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        long fact = 1;
+
+        if (n < 0) {
+            System.out.println("Factorial is not defined for negative numbers.");
+        } else {
+            for (int i = 1; i <= n; i++) {
+                fact = fact * i;
+            }
+
+            System.out.println("Factorial = " + fact);
+        }
+
+        sc.close();
+    }
+}
+
+7. Count numbers between 1 and 100 divisible by 7
+java
+public class Main {
+    public static void main(String[] args) {
+        int count = 0;
+
+        for (int i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                count++;
+            }
+        }
+
+        System.out.println("Count = " + count);
+    }
+}
+
+8. Print numbers from 100 down to 1 java
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 100; i >= 1; i--) {
+            System.out.println(i);
+        }
+    }
+}
+
+
+9. Calculate the sum of all even numbers from 1 to N
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
+        int sum = 0;
+
+        for (int i = 2; i <= n; i += 2) {
+            sum += i;
+        }
+
+        System.out.println("Sum of even numbers = " + sum);
+        sc.close();
+    }
+}
+ 
+
+while loop
+
+1. Print numbers from 1 to 20
+public class Main {
+    public static void main(String[] args) {
+        int i = 1;
+
+        while (i <= 20) {
+            System.out.println(i);
+            i++;
+        }
+    }
+}
+
+2. Find the sum of the digits of a number
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = Math.abs(sc.nextInt());
+        int sum = 0;
+
+        while (n > 0) {
+            int digit = n % 10;
+            sum += digit;
+            n = n / 10;
+        }
+
+        System.out.println("Sum of digits = " + sum);
+        sc.close();
+    }
+}
+
+3. Count the digits in a positive integer
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a positive integer: ");
+        int n = sc.nextInt();
+        int count = 0;
+
+        if (n <= 0) {
+            System.out.println("Enter a positive integer.");
+        } else {
+            while (n > 0) {
+                count++;
+                n = n / 10;
+            }
+
+            System.out.println("Number of digits = " + count);
+        }
+
+        sc.close();
+    }
+}
+
+4. Reverse a positive integer
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a positive integer: ");
+        int n = sc.nextInt();
+        int reverse = 0;
+
+        while (n > 0) {
+            int digit = n % 10;
+            reverse = reverse * 10 + digit;
+            n = n / 10;
+        }
+
+        System.out.println("Reverse = " + reverse);
+        sc.close();
+    }
+}
+
+5. Check whether a number is a palindrome
+A palindrome reads the same forward and backward.
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        int original = n;
+        int reverse = 0;
+
+        while (n > 0) {
+            int digit = n % 10;
+            reverse = reverse * 10 + digit;
+            n = n / 10;
+        }
+
+        if (original >= 0 && original == reverse) {
+            System.out.println("Palindrome number");
+        } else {
+            System.out.println("Not a palindrome");
+        }
+
+        sc.close();
+    }
+}
+
+
+6. Find the product of the digits of a number java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = Math.abs(sc.nextInt());
+        int product = 1;
+
+        while (n > 0) {
+            int digit = n % 10;
+            product *= digit;
+            n = n / 10;
+        }
+
+        System.out.println("Product of digits = " + product);
+        sc.close();
+    }
+}
+
+7. Check whether a number is an Armstrong number
+For a three-digit number, add the cubes of its digits. If the sum equals the original number, it is an Armstrong number.java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        int original = n;
+        int temp = n;
+        int digits = 0;
+        int sum = 0;
+
+        if (n < 0) {
+            System.out.println("Not an Armstrong number");
+        } else {
+            int countTemp = n;
+
+            while (countTemp > 0) {
+                digits++;
+                countTemp /= 10;
+            }
+
+            if (digits == 0) {
+                digits = 1;
+            }
+
+            while (temp > 0) {
+                int digit = temp % 10;
+                sum += (int) Math.pow(digit, digits);
+                temp /= 10;
+            }
+
+            if (sum == original) {
+                System.out.println("Armstrong number");
+            } else {
+                System.out.println("Not an Armstrong number");
+            }
+        }
+
+        sc.close();
+    }
+}
+
+Do-while loop
+
+1. Print numbers from 1 to 10
+
+public class Main {
+    public static void main(String[] args) {
+        int i = 1;
+
+        do {
+            System.out.println(i);
+            i++;
+        } while (i <= 10);
+    }
+}
+
+2. Print a menu at least once
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
+        do {
+            System.out.println("1. Add");
+            System.out.println("2. Subtract");
+            System.out.println("3. Exit");
+
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+
+        } while (choice != 3);
+
+        System.out.println("Program ended.");
+        sc.close();
+    }
+}
+
+3. Ask the user to enter a PIN until the correct PIN is entered
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int pin;
+        int correctPin = 1234;
+
+        do {
+            System.out.print("Enter your PIN: ");
+            pin = sc.nextInt();
+
+            if (pin != correctPin) {
+                System.out.println("Incorrect PIN. Try again.");
+            }
+
+        } while (pin != correctPin);
+
+        System.out.println("Correct PIN. Access granted.");
+        sc.close();
+    }
+}
+
+
+4. Create a calculator menu that repeats until Exit
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int choice;
+        double a, b;
+
+        do {
+            System.out.println("\n--- Calculator ---");
+            System.out.println("1. Addition");
+            System.out.println("2. Subtraction");
+            System.out.println("3. Multiplication");
+            System.out.println("4. Division");
+            System.out.println("5. Exit");
+
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+
+            if (choice >= 1 && choice <= 4) {
+                System.out.print("Enter first number: ");
+                a = sc.nextDouble();
+
+                System.out.print("Enter second number: ");
+                b = sc.nextDouble();
+
+                switch (choice) {
+                    case 1:
+                        System.out.println("Result = " + (a + b));
+                        break;
+                    case 2:
+                        System.out.println("Result = " + (a - b));
+                        break;
+                    case 3:
+                        System.out.println("Result = " + (a * b));
+                        break;
+                    case 4:
+                        if (b == 0) {
+                            System.out.println("Cannot divide by zero.");
+                        } else {
+                            System.out.println("Result = " + (a / b));
+                        }
+                        break;
+                }
+            } else if (choice != 5) {
+                System.out.println("Invalid choice.");
+            }
+
+        } while (choice != 5);
+
+        System.out.println("Calculator closed.");
+        sc.close();
+    }
+}
+
+5. Demonstrate while vs do-while when the condition is initially false
+
+public class Main {
+    public static void main(String[] args) {
+        int i = 10;
+
+        System.out.println("While loop:");
+
+        while (i < 5) {
+            System.out.println(i);
+            i++;
+        }
+
+        System.out.println("Do-while loop:");
+
+        int j = 10;
+
+        do {
+            System.out.println(j);
+            j++;
+        } while (j < 5);
+    }
+}
