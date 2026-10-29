@@ -1,0 +1,56 @@
+1)public class sample7 {
+    public static void main(String[] args) {
+        String name="kogulvanan";
+        char[]ch=name.toCharArray();
+        int count=0;
+        for(char c:ch){
+            count++;
+        }
+        for(int i=count-1;i>=0;i--){
+            System.out.print(ch[i]);
+        }
+    }
+}
+
+2)public class sample7 {
+    public static void main(String[] args) {
+        String name="kogulavanan";
+        int vowels =0;
+        int consonants=0;
+       for(int i=0;i<name.length();i++){
+         String a="aeiouAEIOU";
+         char b=name.charAt(i);
+         if(a.indexOf(b)!=-1){
+            vowels++;
+         }
+         else{
+            consonants++;
+         }
+       }
+       System.out.println("vowels count:"+vowels);
+       System.out.println("consonents count:"+consonants);
+    }
+}
+
+3)import java.util.Arrays;
+
+public class sample7 {
+    public static void main(String[] args) {
+        String s1 = "listen";
+        String s2 = "silent";
+
+        char[] a = s1.toLowerCase().toCharArray();
+        char[] b = s2.toLowerCase().toCharArray();
+
+        Arrays.sort(a);
+        Arrays.sort(b);
+
+        if (Arrays.equals(a, b)) {
+            System.out.println("Strings are Anagrams");
+        } else {
+            System.out.println("Strings are not Anagrams");
+        }
+    }
+}
+
+
